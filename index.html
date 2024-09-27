@@ -1,41 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Interactive Resume</title>
-    <title>Interactive Resume</title>
+    <title>Simple AI Button</title>
 </head>
 <body>
-    <!-- Your Resume Content Here -->
-    <h1>John Doe</h1>
-    <h1>John Doe's Resume</h1>
-<p>Software Developer | john.doe@example.com | LinkedIn: linkedin.com/in/johndoe</p>
-    <hr>
-    <h2>Experience</h2>
-    <p>Details of your professional experience...</p>
-    <hr>
-    <h2>Skills</h2>
-    <p>Programming languages, frameworks, etc...</p>
+    <h1>My Resume</h1>
+    <p>Software Developer | john.doe@example.com | LinkedIn: linkedin.com/in/johndoe</p>
 
-    <!-- Interactive AI Button -->
-    <button id="aiButton" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
-        Talk to AI
-    <button id="aiButton" style="background-color: #4CAF50; color: white; padding: 15px 20px; border: none; cursor: pointer; font-size: 16px;">
-        Talk to my AI Assistant
-</button>
+    <!-- Simple Button -->
+    <button id="aiButton" style="padding: 10px 20px; font-size: 16px;">Talk to my AI Assistant</button>
 
-    <!-- Play.ht Script -->
     <!-- PlayAI Script -->
-<script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
-<script type="text/javascript">
-      document.getElementById('aiButton').addEventListener('click', () => {
-        try {
-          // Use the Play.ht ID in the open method
-          PlayAI.open('9qmW4HCaQJUpgXN5zG9BUegfMu62');
-        } catch (error) {
-          console.error("Error initializing PlayAI:", error);
-        }
+    <script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
+    <script type="text/javascript">
       document.getElementById("aiButton").addEventListener("click", () => {
         PlayAI.open('8Ng-oAqC8Ci-rVZu19vqN');
-});
-</script>
+      });
+    </script>
 </body>
+</html>

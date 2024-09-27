@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Interactive Resume</title>
-</head>
-<body>
-    <h1>John Doe's Resume</h1>
-    <p>Software Developer | john.doe@example.com | LinkedIn: linkedin.com/in/johndoe</p>
-    <button id="aiButton" style="background-color: #4CAF50; color: white; padding: 15px 20px; border: none; cursor: pointer; font-size: 16px;">
-        Talk to my AI Assistant
-    </button>
-
-    <!-- PlayAI Script -->
-    <script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
-    <script type="text/javascript">
-      document.getElementById("aiButton").addEventListener("click", () => {
-        PlayAI.open('8Ng-oAqC8Ci-rVZu19vqN');
-      });
-    </script>
-</body>
-</html>
+<script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
+<script type="text/javascript">
+  addEventListener("load", () => {
+    PlayAI.open('8Ng-oAqC8Ci-rVZu19vqN');
+  });
+</script>

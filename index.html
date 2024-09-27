@@ -1,59 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & PDF</title>
-    <script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        #container {
-            position: relative;
-            width: 80%;
-            height: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        #pdf-container {
-            width: 100%;
-            height: 80%;
-            margin-bottom: 20px;
-        }
-        #ai-button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        #ai-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>My Resume</title>
 </head>
 <body>
-    <div id="container">
-        <div id="pdf-container">
-            <iframe src="https://drive.google.com/file/d/1upGYJKD892ufypDDPjr_J1941lsy3r0T/view?usp=sharing/preview.pdf?raw=1" width="100%" height="600px" style="border: none;"></iframe>
-        </div>
-        <button id="ai-button" onclick="openAI()">Click to Talk to AI</button>
-    </div>
+    <!-- Your Resume Content Here -->
+    <h1>John Doe</h1>
+    <p>Software Developer | john.doe@example.com | LinkedIn: linkedin.com/in/johndoe</p>
+    <hr>
+    <h2>Experience</h2>
+    <p>Details of your professional experience...</p>
+    <hr>
+    <h2>Skills</h2>
+    <p>Programming languages, frameworks, etc...</p>
+
+    <!-- Interactive AI Button -->
+    <button id="aiButton" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Talk to AI</button>
+
+    <!-- AI Script -->
+    <script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
     <script type="text/javascript">
-        function openAI() {
-            PlayAI.open('XPnQk1daRu9jhOwwgOXQB');
-        }
+      document.getElementById('aiButton').addEventListener('click', () => {
+        PlayAI.open('Xp0JUH4-5RPhEUz8k0Cxf');
+      });
     </script>
 </body>
 </html>

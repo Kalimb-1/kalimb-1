@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Resume</title>
+    <title>My Interactive Resume</title>
 </head>
 <body>
     <!-- Your Resume Content Here -->
@@ -15,13 +15,27 @@
     <p>Programming languages, frameworks, etc...</p>
 
     <!-- Interactive AI Button -->
-    <button id="aiButton" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Talk to AI</button>
+    <button id="aiButton" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+        Talk to AI
+    </button>
 
-    <!-- AI Script -->
+    <!-- PlayAI Script -->
     <script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
     <script type="text/javascript">
-      document.getElementById('aiButton').addEventListener('click', () => {
-        PlayAI.open('Xp0JUH4-5RPhEUz8k0Cxf');
+      document.addEventListener("DOMContentLoaded", () => {
+        // Check if PlayAI is defined
+        console.log("Page Loaded: Checking for PlayAI...");
+        if (typeof PlayAI !== 'undefined') {
+          console.log("PlayAI is loaded successfully!");
+
+          // Set up button click event
+          document.getElementById('aiButton').addEventListener('click', () => {
+            console.log("Button clicked. Opening AI...");
+            PlayAI.open('Xp0JUH4-5RPhEUz8k0Cxf');
+          });
+        } else {
+          console.error("PlayAI is not defined. Check if the script URL is correct.");
+        }
       });
     </script>
 </body>

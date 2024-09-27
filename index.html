@@ -19,22 +19,15 @@
         Talk to AI
     </button>
 
-    <!-- PlayAI Script -->
+    <!-- Play.ht Script -->
     <script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
     <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", () => {
-        // Check if PlayAI is defined
-        console.log("Page Loaded: Checking for PlayAI...");
-        if (typeof PlayAI !== 'undefined') {
-          console.log("PlayAI is loaded successfully!");
-
-          // Set up button click event
-          document.getElementById('aiButton').addEventListener('click', () => {
-            console.log("Button clicked. Opening AI...");
-            PlayAI.open('Xp0JUH4-5RPhEUz8k0Cxf');
-          });
-        } else {
-          console.error("PlayAI is not defined. Check if the script URL is correct.");
+      document.getElementById('aiButton').addEventListener('click', () => {
+        try {
+          // Use the Play.ht ID in the open method
+          PlayAI.open('9qmW4HCaQJUpgXN5zG9BUegfMu62');
+        } catch (error) {
+          console.error("Error initializing PlayAI:", error);
         }
       });
     </script>

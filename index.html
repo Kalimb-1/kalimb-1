@@ -1,6 +1,54 @@
-<script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
-<script type="text/javascript">
-  addEventListener("load", () => {
-    PlayAI.open('x6o6XUo1RiPvZZ-64x4ZW');
-  });
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customized Button and Tab</title>
+  <!-- Include PlayAI Embed Script -->
+  <script type="text/javascript" src="https://unpkg.com/@play-ai/web-embed"></script>
+  <style>
+    /* Custom CSS for Button and Tab */
+    .playai-widget-button {  /* Replace with the button class name if different */
+      background-color: #3498db !important;  /* Change button color */
+      color: white !important;               /* Button text color */
+      width: 150px !important;               /* Button width */
+      height: 50px !important;               /* Button height */
+      border-radius: 10px !important;        /* Rounded corners */
+    }
+
+    .playai-tab {  /* Replace with the tab class name if different */
+      background-color: #2c3e50 !important;  /* Change tab background color */
+      width: 400px !important;               /* Tab width */
+      height: 300px !important;              /* Tab height */
+      border-radius: 15px !important;        /* Add rounded corners to the tab */
+    }
+  </style>
+</head>
+<body>
+  <!-- Script to Load and Customize PlayAI Widget -->
+  <script type="text/javascript">
+    addEventListener("load", () => {
+      PlayAI.open('x6o6XUo1RiPvZZ-64x4ZW');
+
+      // Custom JavaScript to apply styles after loading
+      setTimeout(() => {
+        const button = document.querySelector('.playai-widget-button');  // Replace with actual button class name if different
+        if (button) {
+          button.style.backgroundColor = '#3498db';  // Custom button color
+          button.style.width = '150px';              // Custom button width
+          button.style.height = '50px';              // Custom button height
+          button.style.borderRadius = '10px';        // Rounded corners
+        }
+
+        const tab = document.querySelector('.playai-tab');  // Replace with actual tab class name if different
+        if (tab) {
+          tab.style.backgroundColor = '#2c3e50';  // Custom tab color
+          tab.style.width = '400px';              // Custom tab width
+          tab.style.height = '300px';             // Custom tab height
+          tab.style.borderRadius = '15px';        // Add rounded corners to the tab
+        }
+      }, 1000);  // Delay to ensure elements are loaded before applying styles
+    });
+  </script>
+</body>
+</html>
